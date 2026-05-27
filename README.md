@@ -69,7 +69,7 @@ npm run preview
 Open issues or PRs for improvements. If you want me to push this repo to GitHub and deploy, tell me the desired repository name and whether you want me to create it under your account.
 
 ---
-_Prepared for a front-end internship submission — contact me for final screenshots or a live demo link._
+_Contact me for final screenshots or a live demo link._
 # Alpha Dashboard
 
 React + Vite admin dashboard for the front-end internship assignment.
