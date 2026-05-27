@@ -1,14 +1,19 @@
 import { LogOut, Menu, ShieldCheck, UserCircle2 } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 
-export default function Topbar() {
+export default function Topbar({ onMenuClick }) {
   const { user, logout } = useAuth();
 
   return (
     <header className="rounded-[28px] border border-white/70 bg-white/80 px-4 py-4 shadow-soft backdrop-blur xl:px-6">
       <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
         <div className="flex items-center gap-3">
-          <button className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-slate-200 bg-white lg:hidden">
+          <button
+            type="button"
+            onClick={onMenuClick}
+            className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-slate-200 bg-white lg:hidden"
+            aria-label="Open navigation menu"
+          >
             <Menu size={18} />
           </button>
           <div>
