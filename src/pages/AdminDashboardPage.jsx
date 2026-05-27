@@ -64,12 +64,15 @@ export default function AdminDashboardPage() {
               </PieChart>
             </ResponsiveContainer>
           </div>
-          <div className="mt-4 flex flex-wrap gap-3">
+          <div className="mt-4 grid gap-3 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
             {summary.categories.map((entry, index) => (
-              <div key={entry.name} className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-3 py-2 text-sm text-slate-700">
-                <span className="h-2.5 w-2.5 rounded-full" style={{ backgroundColor: COLORS[index % COLORS.length] }} />
-                <span>{entry.name}</span>
-                <span className="font-semibold text-slate-950">{entry.value}</span>
+              <div
+                key={entry.name}
+                className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-slate-50 px-3 py-2 text-sm text-slate-700"
+              >
+                <span className="h-3 w-3 flex-shrink-0 rounded-full" style={{ backgroundColor: COLORS[index % COLORS.length] }} />
+                <span className="break-words text-sm text-slate-700">{entry.name}</span>
+                <span className="ml-auto font-semibold text-slate-950">{entry.value}</span>
               </div>
             ))}
           </div>
